@@ -1,0 +1,556 @@
+// home-----------
+.kvBanner {
+    background-image: url('https://images.unsplash.com/photo-1588159343745-445ae0b16383?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');
+    background-size: cover;
+    background-position: center;
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        padding-block: 295px;
+    }
+
+    .textBox {
+        max-width: 445px;
+        color: #FFF;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    @media (max-width:$breakPoint) {
+        .container {
+            padding-block: 101px 135px;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.Btn-white {
+    margin-top: 16px;
+    border-radius: 50px;
+    padding-block: 13px;
+    border: 2px solid #FFF;
+    background-color: transparent;
+    text-align: center;
+    width: 350px;
+    color: #FFF;
+    font-size: 28px;
+    line-height: 1;
+
+    &:hover {
+        background-color: #FFFFFF4D;
+        color: #FFF;
+    }
+
+    @media (max-width:$breakPoint) {
+        width: 100%;
+    }
+
+}
+
+.hotTopic {
+    margin-top: 60px;
+
+    @media (max-width:$breakPoint) {
+        margin-top: 8px;
+    }
+
+    .rowWrap {
+        align-items: stretch;
+        row-gap: 8px;
+
+        @media (max-width:$breakPoint) {
+            margin-top: 32px;
+        }
+
+
+    }
+
+    .textArea,
+    .picArea {
+        width: 50%;
+        overflow: hidden;
+
+        @media (max-width:$breakPoint) {
+            width: 100%;
+        }
+    }
+
+    .textArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 555px;
+        align-items: center;
+        padding-inline: 16px;
+
+        &:last-of-type {
+            height: initial;
+            padding-block: 92px;
+        }
+
+        @media (max-width:$breakPoint) {
+            padding-inline: 0;
+            padding-block: 0;
+            height: initial;
+            align-items: flex-start;
+
+            &:last-of-type {
+                padding-block: 8px;
+            }
+        }
+
+
+
+        .textBox {
+            max-width: 350px;
+
+            @media (max-width:$breakPoint) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .textArea a {
+        color: $main;
+        margin-top: 16px;
+        width: fit-content;
+        display: inline-block;
+
+        @media (max-width:$breakPoint) {
+            margin-top: 8px;
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
+        list-style-position: inside;
+
+        li~li {
+            margin-top: 52px;
+        }
+
+        li::marker,
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 4px;
+            font-size: 16px;
+        }
+
+        &~button {
+            border: 2px solid #000000;
+            border-radius: 50px;
+            font-size: 20px;
+            text-align: center;
+            padding-block: 18px;
+            width: 100%;
+            line-height: 1;
+            margin-top: 60px;
+
+            @media (max-width:$breakPoint) {
+                margin-top: 20px;
+            }
+
+            &:hover {
+                background-color: #0000000D;
+                color: #000000;
+            }
+        }
+
+    }
+
+
+    .picArea {
+        &:hover {
+            .imgBox {
+                transform: scale(1.05) translate(-1%, -1%);
+            }
+        }
+
+        @media (max-width:$breakPoint) {
+            order: -1;
+        }
+    }
+
+    .imgBox {
+        height: 100%;
+        background-position: 50% 20%;
+        background-size: cover;
+        transition: transform 0.4s ease-in-out;
+
+        @media (max-width:$breakPoint) {
+            height: 350px;
+        }
+    }
+
+    .rowWrap:last-of-type .imgBox {
+        @media (max-width:$breakPoint) {
+            height: 680px;
+        }
+    }
+
+}
+
+.hotProduct {
+    margin-top: 60px;
+    padding-block: 40px;
+    background-color: #E0E0E0;
+
+    @media (max-width:$breakPoint) {
+        margin-top: 40px;
+        padding-block: 32px;
+    }
+
+    .rowWrap {
+        column-gap: 30px;
+        row-gap: 32px;
+    }
+
+    li {
+        width: calc((100% - 60px) / 3);
+
+        @media (max-width:$breakPoint) {
+            width: 100%;
+        }
+    }
+
+    .imgBox {
+        height: 540px;
+
+        @media (max-width:$breakPoint) {
+            height: 350px;
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+
+            @media (max-width:$breakPoint) {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+
+    h4 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    p {
+        font-weight: 300;
+    }
+
+    .price {
+        display: flex;
+        gap: 8px;
+        margin-top: 16px;
+
+        @media (max-width:$breakPoint) {
+            margin-top: 4px;
+        }
+    }
+
+    .orgPrice {
+        color: $gray;
+        text-decoration: line-through;
+    }
+}
+
+.homeArticle {
+    padding-block: 60px;
+
+    @media (max-width:$breakPoint) {
+        padding-block: 40px;
+    }
+
+    .imgBox {
+        width: 65%;
+    }
+
+    .textArea {
+        width: 35%;
+        padding-inline: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textBox {
+        max-width: 350px;
+    }
+
+    @media (max-width:$breakPoint) {
+
+        .imgBox,
+        .textArea {
+            width: 100%;
+        }
+
+        .imgBox {
+            height: 520px;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        .textArea {
+            padding-inline: 0px;
+        }
+
+        .textBox {
+            max-width: 100%;
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #000000;
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    p {
+        margin-block: 16px;
+        font-weight: 300;
+    }
+
+    a {
+        color: $main;
+    }
+
+    @media (max-width:$breakPoint) {
+
+        p {
+            margin-block: 8px;
+        }
+
+        h2 {
+            margin-top: 8px;
+        }
+    }
+
+
+}
+
+.contact {
+    background-image: url('https://images.unsplash.com/photo-1532413992378-f169ac26fff0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80');
+    background-position: center left;
+    background-size: cover;
+    padding-block: 312px 112px;
+
+    .textBox {
+        max-width: 350px;
+
+        @media (max-width:$breakPoint) {
+            max-width: 100%;
+        }
+    }
+
+    h3 {
+        font-size: 32px;
+        color: $gray;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .submit {
+        border: 2px solid $main;
+        border-radius: 4px;
+        display: flex;
+    }
+
+    input {
+        padding-block: 20px;
+        padding-left: 16px;
+        width: 63%;
+        border: none;
+        font-size: 16px;
+
+        &:focus,
+        &:focus-visible {
+            border: none;
+            outline: none;
+        }
+    }
+
+    button {
+        background-color: $main;
+        color: #FFF;
+        text-align: center;
+        width: 38%;
+    }
+}
+
+//product-----------------
+.productFilter {
+    background-color: $main;
+
+    ul {
+        display: flex;
+    }
+
+    li button {
+        padding: 14px;
+        cursor: pointer;
+        color: #FFF;
+        font-size: 20px;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            background-color: #FFF;
+            color: $main;
+        }
+    }
+
+    @media (max-width:$breakPoint) {
+        display: none;
+    }
+
+}
+
+.product-list {
+    padding-block: 80px 60px;
+
+    @media (max-width:$breakPoint) {
+        padding-block: 42px 40px;
+    }
+}
+
+.main-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 58px 30px;
+
+    @media (max-width:$breakPoint) {
+        gap: 30px 15px;
+    }
+
+    .card {
+        width: calc((100% - 90px) / 4);
+
+        @media (max-width:$breakPoint) {
+            width: calc((100% - 15px) / 2);
+        }
+
+        .imgBox {
+            width: 100%;
+            height: min(255px, calc(100vw / 4));
+            background-color: #000000;
+
+            @media (max-width:$breakPoint) {
+                height: calc((100vw - 15px) / 2);
+            }
+        }
+
+        a h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+
+            &:hover {
+                color: $main;
+            }
+        }
+
+        .price {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .orgPirce {
+            text-decoration: line-through;
+            color: $gray;
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            button {
+                color: $main;
+
+                &:hover {
+                    transform: translateY(-1.5px);
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}
+
+.pageNav {
+    margin-top: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width:$breakPoint) {
+        margin-top: 46px;
+    }
+
+    a {
+        cursor: pointer;
+        font-size: 20px;
+
+        // color: #000000;
+        &.active {
+            color: $main;
+            text-decoration: underline;
+        }
+    }
+}
